@@ -47,6 +47,7 @@ async function renderContainer(value, page) {
     wrapperEl.insertAdjacentHTML('beforeend', generateContentList(hits));
     lightbox.refresh();
     if (totalHits === 0) {
+      loadMoreBtnEl.style.display = 'none';
       Notify.failure(
         'Sorry, there are no images matching your search query. Please try again.'
       );
